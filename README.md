@@ -1,0 +1,51 @@
+# Project Title
+
+## Date: 3/28/22
+
+### By: Lawrence O'Regan-Lloyd
+
+### [Twitter](https://twitter.com/Lawrence_OL) | [Github](https://github.com/LawrenceOL) | [LinkedIn](https://www.linkedin.com/in/lawrenceol/)
+
+---
+
+### **_Description_**
+
+### A social rating website for all things cheese
+
+---
+
+### **_Technologies Used_**
+
+- HTML
+- CSS
+- ES6
+- React
+- Node.js
+- MongoDB
+- Express
+- Git
+  - Github
+
+<!-- ### ***Screenshots***
+
+#### Image Header 1
+
+![Image](https://th.bing.com/th/id/OIP.aiVHY_9UjMr0i5vMoUTzBgHaEK?pid=ImgDet&rs=1)
+
+#### Image Header 2
+
+![Image](https://th.bing.com/th/id/OIP.FXRtrmoRLRbDTBclJXhZCQHaGH?pid=ImgDet&rs=1) -->
+
+### **_Future Updates_**
+
+- [ ] Add cheeses
+- [ ] Add ratings
+- [ ] Add cheese maker profiles
+
+### **_Inspired By:_**
+
+#### [Beer Advocate](https://www.beeradvocate.com/)
+
+#### [IMDB](https://www.imdb.com/)
+
+#### [Erewhon](https://www.erewhonmarket.com/)
