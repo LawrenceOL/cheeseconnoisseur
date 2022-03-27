@@ -46,6 +46,10 @@
 - [ ] Add ratings
 - [ ] Add cheese maker profiles
 
+### **_Credits:_**
+
+[Cheese image by Tabitha Mort on Pexels](https://www.pexels.com/photo/close-up-photography-of-cheese-773253/)
+
 ### **_Inspired By:_**
 
 #### [Beer Advocate](https://www.beeradvocate.com/)
