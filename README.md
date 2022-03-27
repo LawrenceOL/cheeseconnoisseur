@@ -1,4 +1,4 @@
-# Project Title
+# Cheese Connoisseur
 
 ## Date: 3/28/22
 
@@ -7,6 +7,8 @@
 ### [Twitter](https://twitter.com/Lawrence_OL) | [Github](https://github.com/LawrenceOL) | [LinkedIn](https://www.linkedin.com/in/lawrenceol/)
 
 ---
+
+![Image](https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 ### **_Description_**
 
@@ -30,7 +32,7 @@
 
 #### Image Header 1
 
-![Image](https://th.bing.com/th/id/OIP.aiVHY_9UjMr0i5vMoUTzBgHaEK?pid=ImgDet&rs=1)
+![Image](https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
 
 #### Image Header 2
 
