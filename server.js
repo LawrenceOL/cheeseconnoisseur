@@ -1,8 +1,9 @@
 //required
 const express = require('express')
-const cors = require('cors')
-const logger = require('morgan')
+const routes = require('./routes')
 const db = require('./db')
+const logger = require('morgan')
+const cors = require('cors')
 
 //middleware
 
@@ -13,11 +14,9 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(logger('dev'))
+app.use('/api', routes)
 
-//routes
-app.get('/', (req, res) => {
-  res.send('This is the root')
-})
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
