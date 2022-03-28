@@ -29,7 +29,7 @@ const main = async () => {
   ]
 
   await Cheese.insertMany(cheeses)
-  console.log('Created some cheesemakers!')
+  console.log('Created some cheese!')
 }
 const run = async () => {
   await main()
