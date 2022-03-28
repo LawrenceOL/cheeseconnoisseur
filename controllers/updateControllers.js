@@ -1,8 +1,10 @@
 const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
+//updates cheese name to handleChange
 const updateCheese = async (req, res) => {
   try {
     const cheese = await Cheese.findById(req.body)
+    cheese.name = 'handleChange'
     await cheese.save()
     return res.status(201).json({ cheese })
   } catch (error) {
@@ -10,9 +12,11 @@ const updateCheese = async (req, res) => {
   }
 }
 
+//update cheesemaker name by cheesemaker id
 const updateCheesemaker = async (req, res) => {
   try {
     const cheesemaker = await Cheesemaker.findById(req.body)
+    cheesemaker.name = 'handleChange'
     await cheesemaker.save()
     return res.status(201).json({ cheesemaker })
   } catch (error) {
@@ -20,9 +24,11 @@ const updateCheesemaker = async (req, res) => {
   }
 }
 
+//update review by reviewid
 const updateReview = async (req, res) => {
   try {
     const review = await Review.findById(req.body)
+    review.details = 'handleChange'
     await review.save()
     return res.status(201).json({ review })
   } catch (error) {
@@ -30,15 +36,21 @@ const updateReview = async (req, res) => {
   }
 }
 
+//by rating id
 const updateRating = async (req, res) => {
   try {
     const rating = await Rating.findById(req.body)
+    rating.rating = 1
     await rating.save()
     return res.status(201).json({ rating })
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
 }
+
+// const doc = await Model.findById(id);
+// doc.name = 'jason bourne';
+// await doc.save();
 
 module.exports = {
   updateCheese,
