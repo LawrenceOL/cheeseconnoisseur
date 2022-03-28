@@ -1,9 +1,11 @@
 const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
+// all read<documentType> functions below use findById
+
 const readCheese = async (req, res) => {
   try {
-    const { id } = req.body
-    const cheese = await Cheese.findById(id)
+    console.log(req.body)
+    const cheese = await Cheese.findById(req.body)
     if (cheese) {
       return res.status(200).json({ cheese })
     }
@@ -15,8 +17,7 @@ const readCheese = async (req, res) => {
 
 const readCheesemaker = async (req, res) => {
   try {
-    const { id } = req.body
-    const cheesemaker = await Cheesemaker.findById(id)
+    const cheesemaker = await Cheesemaker.findById(req.body)
     if (cheesemaker) {
       return res.status(200).json({ cheesemaker })
     }
@@ -30,8 +31,7 @@ const readCheesemaker = async (req, res) => {
 
 const readReview = async (req, res) => {
   try {
-    const { id } = req.body
-    const review = await Review.findById(id)
+    const review = await Review.findById(req.body)
     if (review) {
       return res.status(200).json({ review })
     }
@@ -43,8 +43,7 @@ const readReview = async (req, res) => {
 
 const readRating = async (req, res) => {
   try {
-    const { id } = req.body
-    const rating = await Rating.findById(id)
+    const rating = await Rating.findById(req.body)
     if (rating) {
       return res.status(200).json({ rating })
     }

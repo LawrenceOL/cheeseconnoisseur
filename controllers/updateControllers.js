@@ -2,7 +2,7 @@ const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
 const updateCheese = async (req, res) => {
   try {
-    const cheese = await new Cheese(req.body)
+    const cheese = await Cheese.findById(req.body)
     await cheese.save()
     return res.status(201).json({ cheese })
   } catch (error) {
@@ -12,7 +12,7 @@ const updateCheese = async (req, res) => {
 
 const updateCheesemaker = async (req, res) => {
   try {
-    const cheesemaker = await new Cheesemaker(req.body)
+    const cheesemaker = await Cheesemaker.findById(req.body)
     await cheesemaker.save()
     return res.status(201).json({ cheesemaker })
   } catch (error) {
@@ -22,7 +22,7 @@ const updateCheesemaker = async (req, res) => {
 
 const updateReview = async (req, res) => {
   try {
-    const review = await new Review(req.body)
+    const review = await Review.findById(req.body)
     await review.save()
     return res.status(201).json({ review })
   } catch (error) {
@@ -32,7 +32,7 @@ const updateReview = async (req, res) => {
 
 const updateRating = async (req, res) => {
   try {
-    const rating = await new Rating(req.body)
+    const rating = await Rating.findById(req.body)
     await rating.save()
     return res.status(201).json({ rating })
   } catch (error) {

@@ -2,7 +2,7 @@ const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
 const deleteCheese = async (req, res) => {
   try {
-    const cheese = await Cheese(req.body)
+    const cheese = await Cheese.findById(req.body)
     await cheese.deleteOne()
     return res.status(201).json({ cheese })
   } catch (error) {
@@ -12,7 +12,7 @@ const deleteCheese = async (req, res) => {
 
 const deleteCheesemaker = async (req, res) => {
   try {
-    const cheesemaker = await Cheesemaker(req.body)
+    const cheesemaker = await Cheesemaker.findById(req.body)
     await cheesemaker.deleteOne()
     return res.status(201).json({ cheesemaker })
   } catch (error) {
@@ -22,7 +22,7 @@ const deleteCheesemaker = async (req, res) => {
 
 const deleteReview = async (req, res) => {
   try {
-    const review = await Review(req.body)
+    const review = await Review.findById(req.body)
     await review.deleteOne()
     return res.status(201).json({ review })
   } catch (error) {
@@ -32,7 +32,7 @@ const deleteReview = async (req, res) => {
 
 const deleteRating = async (req, res) => {
   try {
-    const rating = await Rating(req.body)
+    const rating = await Rating.findById(req.body)
     await rating.deleteOne()
     return res.status(201).json({ rating })
   } catch (error) {
