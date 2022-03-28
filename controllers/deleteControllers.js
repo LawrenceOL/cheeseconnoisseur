@@ -2,8 +2,8 @@ const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
 const deleteCheese = async (req, res) => {
   try {
-    const cheese = await new Cheese(req.body)
-    await cheese.save()
+    const cheese = await Cheese(req.body)
+    await cheese.deleteOne()
     return res.status(201).json({ cheese })
   } catch (error) {
     return res.status(500).json({ error: error.message })
@@ -12,8 +12,8 @@ const deleteCheese = async (req, res) => {
 
 const deleteCheesemaker = async (req, res) => {
   try {
-    const cheesemaker = await new Cheesemaker(req.body)
-    await cheesemaker.save()
+    const cheesemaker = await Cheesemaker(req.body)
+    await cheesemaker.deleteOne()
     return res.status(201).json({ cheesemaker })
   } catch (error) {
     return res.status(500).json({ error: error.message })
@@ -22,8 +22,8 @@ const deleteCheesemaker = async (req, res) => {
 
 const deleteReview = async (req, res) => {
   try {
-    const review = await new Review(req.body)
-    await review.save()
+    const review = await Review(req.body)
+    await review.deleteOne()
     return res.status(201).json({ review })
   } catch (error) {
     return res.status(500).json({ error: error.message })
@@ -32,8 +32,8 @@ const deleteReview = async (req, res) => {
 
 const deleteRating = async (req, res) => {
   try {
-    const rating = await new Rating(req.body)
-    await rating.save()
+    const rating = await Rating(req.body)
+    await rating.deleteOne()
     return res.status(201).json({ rating })
   } catch (error) {
     return res.status(500).json({ error: error.message })
