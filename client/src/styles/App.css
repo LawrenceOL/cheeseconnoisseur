@@ -14,6 +14,10 @@ h1 {
   text-align: center;
 }
 
+img {
+  width: 200px;
+}
+
 .container-grid {
   padding: 40px 0;
   display: grid;
