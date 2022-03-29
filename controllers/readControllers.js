@@ -1,7 +1,5 @@
 const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
-// all read<documentType> functions below use findById
-
 const readCheese = async (req, res) => {
   try {
     console.log(req.body)
@@ -10,6 +8,18 @@ const readCheese = async (req, res) => {
       return res.status(200).json({ cheese })
     }
     return res.status(404).send('cheese with the specified ID does not exists')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const readAllCheese = async (req, res) => {
+  try {
+    const cheese = await Cheese.find()
+    if (cheese) {
+      return res.status(200).json({ cheese })
+    }
+    return res.status(404).send('error has occurred getting all the cheese')
   } catch (error) {
     return res.status(500).send(error.message)
   }
@@ -57,5 +67,6 @@ module.exports = {
   readCheese,
   readCheesemaker,
   readReview,
-  readRating
+  readRating,
+  readAllCheese
 }
