@@ -1,37 +1,33 @@
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
-import CheeseCard from '../components/CheeseCard.jsx'
-import { useState, useEffect } from 'react'
-// import { Routes, Route, useNavigate } from 'react-router-dom'
+import CheeseCard from '../components/CheeseCard'
 
 const Home = () => {
-  const [inputField, setinputField] = useState('')
-  const [cheeseData, setCheeseData] = useState([])
+  const [cheeses, setCheeses] = useState([])
 
   useEffect(() => {
-    const getCheeseData = async () => {
-      const response = await axios.get(`localhost3001/readAllCheese`)
-
-      setCheeseData(response.data.results)
+    const getCheeses = async () => {
+      const response = await axios.get(
+        `http://10.0.0.242:3001/api/readAllCheese`
+      )
+      setCheeses(response.data.cheese)
     }
-    getCheeseData()
+    getCheeses()
   }, [])
-
-  const handleChange = (e) => {
-    setinputField(e.target.value)
-  }
 
   return (
     <div>
-      {cheeseData.map((result) => (
-        <CheeseCard
-          name={result.name}
-          details={result.details}
-          image={result.image}
-          key={result._id}
-        />
-      ))}
-      <p>routed to the root bb</p>
+      <div className="cheeses">
+        <h1>Cheeses</h1>
+        <section className="container-grid">
+          {cheeses.map((cheese) => (
+            <CheeseCard name={cheese.name} image={cheese.image} />
+          ))}
+        </section>
+      </div>
     </div>
   )
 }
+
 export default Home

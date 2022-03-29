@@ -1,12 +1,11 @@
 const CheeseCard = (props) => {
   return (
-    <div className="card cheese-card">
-      <div className="img-wrapper">
+    <div>
+      <div>
         <img src={props.image} alt={props.name}></img>
       </div>
-      <div className="info-wrapper flex-col"></div>
-      <h2>{props.name}</h2>
-      <p>{props.details}</p>
+      <div></div>
+      <h3>{props.name}</h3>
     </div>
   )
 }
