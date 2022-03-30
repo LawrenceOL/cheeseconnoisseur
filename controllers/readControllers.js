@@ -15,9 +15,21 @@ const readCheese = async (req, res) => {
 
 const readAllCheese = async (req, res) => {
   try {
-    const cheese = await Cheese.find()
+    const cheese = await Cheese.find().populate('cheesemaker')
     if (cheese) {
       return res.status(200).json({ cheese })
+    }
+    return res.status(404).send('error has occurred getting all the cheese')
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
+const readAllCheesemakers = async (req, res) => {
+  try {
+    const cheesemaker = await Cheesemaker.find()
+    if (cheesemaker) {
+      return res.status(200).json({ cheesemaker })
     }
     return res.status(404).send('error has occurred getting all the cheese')
   } catch (error) {
@@ -68,5 +80,6 @@ module.exports = {
   readCheesemaker,
   readReview,
   readRating,
-  readAllCheese
+  readAllCheese,
+  readAllCheesemakers
 }

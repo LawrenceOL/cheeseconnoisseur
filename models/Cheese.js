@@ -3,6 +3,7 @@ const { Schema } = require('mongoose')
 const Cheese = new Schema(
   {
     name: { type: String, required: true },
+    image: { type: String, required: false },
     details: { type: String, required: false },
     cheesemaker: { type: Schema.Types.ObjectId, ref: 'Cheesemaker' },
     review: { type: Schema.Types.ObjectId, ref: 'Review' },
