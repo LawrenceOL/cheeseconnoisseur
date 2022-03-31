@@ -48,7 +48,7 @@ const Home = () => {
               name={cheese.name}
               image={cheese.image}
               onClick={() => {
-                console.log(cheese._id)
+                setCheesetoDelete(cheese._id)
               }}
             />
           ))}
