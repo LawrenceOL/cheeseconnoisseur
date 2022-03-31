@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Cheesemakers from './pages/Cheesemakers'
 import About from './pages/About'
 import AddCheeseForm from './pages/AddCheeseForm'
+import ConfirmCheese from './pages/ConfirmCheese'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/cheesemakers" element={<Cheesemakers />} />
           <Route path="/about" element={<About />} />
           <Route path="/addcheeseform" element={<AddCheeseForm />} />
+          <Route path="/cheeseconfirmation" element={<ConfirmCheese />} />
         </Routes>
       </main>
     </div>
