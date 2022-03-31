@@ -27,11 +27,41 @@ const main = async () => {
       rating: null
     },
     {
-      name: "Brewster's Own Mozzarella",
-      description:
-        "Mozzarella is a southern Italian cheese traditionally made from Italian buffalo's milk by the pasta filata method. Fresh mozzarella is generally white but when seasoned it turns to a light yellow depending on the animal's diet.",
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Burrata2.jpg/220px-Burrata2.jpg',
+      name: 'Cheddar',
+      description: 'Cheddar cheese is delicious',
+      image: '/assets/cheddar.jpg',
+      cheesemaker: null,
+      Review: null,
+      rating: null
+    },
+    {
+      name: 'Feta',
+      description: 'Feta cheese is from Greece',
+      image: '/assets/feta.jpg',
+      cheesemaker: null,
+      Review: null,
+      rating: null
+    },
+    {
+      name: 'Gouda',
+      description: 'Gouda cheese is so good-ah',
+      image: '/assets/gouda.jpg',
+      cheesemaker: null,
+      Review: null,
+      rating: null
+    },
+    {
+      name: 'Muenster',
+      description: 'Muenster is funster',
+      image: '/assets/muenster.jpg',
+      cheesemaker: null,
+      Review: null,
+      rating: null
+    },
+    {
+      name: 'Swiss',
+      description: 'Swiss cheese is full of holes',
+      image: '/assets/swiss.jpg',
       cheesemaker: null,
       Review: null,
       rating: null
