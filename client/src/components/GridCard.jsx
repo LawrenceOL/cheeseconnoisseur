@@ -10,6 +10,13 @@ const GridCard = (props) => {
       <div></div>
       <h3>{props.name}</h3>
       <button onClick={props.onClick}>Delete</button>
+      <input
+        type="text"
+        // value={newCheeseName.name}
+        // onChange={props.handleChange}
+        name={'name'}
+        placeholder={'Enter new name here'}
+      />
     </div>
   )
 }

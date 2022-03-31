@@ -24,6 +24,7 @@ const AddCheeseForm = (props) => {
     event.preventDefault()
     await axios.post(`http://10.0.0.242:3001/api/createCheese`, newCheese)
     setNewCheese({ name: '', image: '', description: '' })
+    handleSubmit()
   }
 
   return (

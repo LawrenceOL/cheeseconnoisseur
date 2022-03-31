@@ -5,6 +5,20 @@ import GridCard from '../components/GridCard'
 const Home = () => {
   const [cheeses, setCheeses] = useState([])
   const [cheesetoDelete, setCheesetoDelete] = useState('')
+  const [newCheeseName, setNewCheeseName] = useState({
+    name: ''
+  })
+
+  const handleChange = (e) => {
+    setNewCheeseName({ ...newCheeseName, [e.target.name]: e.target.value })
+  }
+
+  //need to add correct put request here
+  const submitNewCheeseName = async (event) => {
+    event.preventDefault()
+    await axios.post(`http://10.0.0.242:3001/api/createCheese`, newCheeseName)
+    setNewCheeseName('')
+  }
 
   useEffect(() => {
     const getCheeses = async () => {
@@ -23,6 +37,7 @@ const Home = () => {
         _id: `${cheesetoDelete}`
       }
     })
+
     return () => {
       setCheesetoDelete('')
     }

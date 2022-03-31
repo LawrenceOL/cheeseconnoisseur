@@ -4,6 +4,7 @@ import GridCard from '../components/GridCard'
 
 const Cheesemakers = () => {
   const [cheesemakers, setCheesemakers] = useState([])
+  const [cheesemakertoDelete, setCheesemakertoDelete] = useState('')
 
   useEffect(() => {
     const getCheesemakers = async () => {
@@ -16,6 +17,19 @@ const Cheesemakers = () => {
     getCheesemakers()
   }, [])
 
+  // axios delete call to be used with button presses
+  useEffect(() => {
+    axios.delete(`http://10.0.0.242:3001/api/deleteCheesemaker`, {
+      data: {
+        _id: `${cheesemakertoDelete}`
+      }
+    })
+
+    return () => {
+      setCheesemakertoDelete('')
+    }
+  }, [cheesemakertoDelete])
+
   return (
     <div>
       <div className="cheesemakers">
@@ -26,6 +40,9 @@ const Cheesemakers = () => {
               key={cheesemaker._id}
               name={cheesemaker.name}
               image={cheesemaker.image}
+              onClick={() => {
+                setCheesemakertoDelete(cheesemaker._id)
+              }}
             />
           ))}
         </section>
