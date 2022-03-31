@@ -6,7 +6,6 @@ const GridCard = (props) => {
       </div>
       <div></div>
       <h3>{props.name}</h3>
-      <button onClick={props.onClick}>Delete</button>
       <form onSubmit={props.onSubmit}>
         <input
           type="text"
@@ -14,7 +13,9 @@ const GridCard = (props) => {
           onChange={props.onChange}
           placeholder={'Enter new name here'}
         />
+        <button>Submit</button>
       </form>
+      <button onClick={props.onClick}>Delete</button>
     </div>
   )
 }
