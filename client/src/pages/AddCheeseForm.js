@@ -6,7 +6,6 @@ const AddCheeseForm = (props) => {
   let navigate = useNavigate()
 
   const handleSubmit = (e) => {
-    console.log({ newCheese })
     navigate('/')
   }
 

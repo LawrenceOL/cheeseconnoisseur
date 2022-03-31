@@ -1,14 +1,14 @@
 const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
-//updates cheese name to handleChange
+//updates cheese
 const updateCheese = async (req, res) => {
   try {
-    const cheese = await Cheese.findById(req.body)
-    cheese.name = 'handleChange'
-    await cheese.save()
-    return res.status(201).json({ cheese })
-  } catch (error) {
-    return res.status(500).json({ error: error.message })
+    const cheese = await Cheese.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.json(cheese)
+  } catch (err) {
+    res.send(err.message)
   }
 }
 

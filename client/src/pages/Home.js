@@ -7,21 +7,7 @@ const Home = () => {
   let navigate = useNavigate()
 
   const [cheeses, setCheeses] = useState([])
-  const [cheesetoDelete, setCheesetoDelete] = useState('')
-  const [newCheeseName, setNewCheeseName] = useState({
-    name: ''
-  })
-
-  const handleChange = (e) => {
-    setNewCheeseName({ ...newCheeseName, [e.target.name]: e.target.value })
-  }
-
-  //need to add correct put request here
-  const submitNewCheeseName = async (event) => {
-    event.preventDefault()
-    await axios.post(`http://10.0.0.242:3001/api/createCheese`, newCheeseName)
-    setNewCheeseName('')
-  }
+  const [newCheeseName, setNewCheeseName] = useState('')
 
   useEffect(() => {
     const getCheeses = async () => {
@@ -33,6 +19,10 @@ const Home = () => {
     getCheeses()
   }, [])
 
+  const handleChange = (e) => {
+    setNewCheeseName({ ...newCheeseName, [e.target.name]: e.target.value })
+  }
+
   // axios delete call to be used with button presses
   const deleteCheese = (_id) => {
     axios.delete(`http://10.0.0.242:3001/api/deleteCheese`, {
@@ -41,6 +31,13 @@ const Home = () => {
       }
     })
     navigate('/cheeseconfirmation')
+  }
+
+  const updateCheeseName = (_id) => {
+    axios.put(`http://10.0.0.242:3001/api/updateCheese/${_id}`, {
+      name: `${newCheeseName}`
+    })
+    // navigate('/cheeseconfirmation')
   }
 
   return (
@@ -53,6 +50,10 @@ const Home = () => {
               key={cheese._id}
               name={cheese.name}
               image={cheese.image}
+              onChange={handleChange}
+              onSubmit={() => {
+                updateCheeseName(cheese._id)
+              }}
               onClick={() => {
                 deleteCheese(cheese._id)
               }}
