@@ -4,12 +4,12 @@ import { useEffect } from 'react'
 const GridCard = (props) => {
   return (
     <div>
-      <div className="grid-card" onClick={props.onClick}>
+      <div className="grid-card">
         <img src={props.image} alt={props.name}></img>
       </div>
       <div></div>
       <h3>{props.name}</h3>
-      <button>Delete</button>
+      <button onClick={props.onClick}>Delete</button>
     </div>
   )
 }
