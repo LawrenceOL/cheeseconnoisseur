@@ -33,12 +33,8 @@ const Home = () => {
     console.log('hi')
   }
 
-  let sayHi = () => {
-    console.log('hi')
-  }
-
-  // const sayCheese = (cheese) => {
-  //   alert(`${cheese._id}`)
+  // let sayHi = () => {
+  //   console.log('hi')
   // }
 
   return (
@@ -51,7 +47,9 @@ const Home = () => {
               key={cheese._id}
               name={cheese.name}
               image={cheese.image}
-              onClick={sayHi}
+              onClick={() => {
+                console.log(cheese._id)
+              }}
             />
           ))}
         </section>
