@@ -4,7 +4,7 @@ import GridCard from '../components/GridCard'
 
 const Home = () => {
   const [cheeses, setCheeses] = useState([])
-  const [cheesetoDelete, setCheesetoDelete] = useState([])
+  const [cheesetoDelete, setCheesetoDelete] = useState('')
 
   useEffect(() => {
     const getCheeses = async () => {
@@ -17,25 +17,16 @@ const Home = () => {
   }, [])
 
   // axios delete call to be used with button presses
-
-  // const deleteCheese = async (event) => {
-  //   useEffect(() => {
-  //     axios.delete(`http://10.0.0.242:3001/api/deleteCheese`, {
-  //       data: {
-  //         _id: `${cheesetoDelete}`
-  //       }
-  //     })
-  //   }, [])
-  // }
-
-  const handleClick = (e) => {
-    // setCheesetoDelete({ [e.target.name]: e.target.value })
-    console.log('hi')
-  }
-
-  // let sayHi = () => {
-  //   console.log('hi')
-  // }
+  useEffect(() => {
+    axios.delete(`http://10.0.0.242:3001/api/deleteCheese`, {
+      data: {
+        _id: `${cheesetoDelete}`
+      }
+    })
+    return () => {
+      setCheesetoDelete('')
+    }
+  }, [cheesetoDelete])
 
   return (
     <div>
