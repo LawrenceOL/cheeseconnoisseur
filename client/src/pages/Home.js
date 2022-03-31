@@ -11,9 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const getCheeses = async () => {
-      const response = await axios.get(
-        `http://10.0.0.242:3001/api/readAllCheese`
-      )
+      const response = await axios.get(`/api/readAllCheese`)
       setCheeses(response.data.cheese)
     }
     getCheeses()
@@ -25,7 +23,7 @@ const Home = () => {
 
   // axios delete call to be used with button presses
   const deleteCheese = (_id) => {
-    axios.delete(`http://10.0.0.242:3001/api/deleteCheese`, {
+    axios.delete(`/api/deleteCheese`, {
       data: {
         _id: `${_id}`
       }
@@ -34,7 +32,7 @@ const Home = () => {
   }
 
   const updateCheeseName = (_id) => {
-    axios.put(`http://10.0.0.242:3001/api/updateCheese/${_id}`, {
+    axios.put(`/api/updateCheese/${_id}`, {
       name: `${newCheeseName.name}`
     })
   }
