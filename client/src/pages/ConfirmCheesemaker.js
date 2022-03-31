@@ -1,4 +1,4 @@
-const ConfirmCheeseMaker = () => {
+const ConfirmCheesemaker = () => {
   return (
     <div>
       <p>Congratulations! You added a new cheesemaker to the page.</p>
@@ -6,4 +6,4 @@ const ConfirmCheeseMaker = () => {
   )
 }
 
-export default ConfirmCheeseMaker
+export default ConfirmCheesemaker

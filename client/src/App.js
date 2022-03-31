@@ -6,6 +6,7 @@ import Cheesemakers from './pages/Cheesemakers'
 import About from './pages/About'
 import AddCheeseForm from './pages/AddCheeseForm'
 import ConfirmCheese from './pages/ConfirmCheese'
+import ConfirmCheesemaker from './pages/ConfirmCheesemaker'
 
 const App = () => {
   return (
@@ -18,6 +19,10 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/addcheeseform" element={<AddCheeseForm />} />
           <Route path="/cheeseconfirmation" element={<ConfirmCheese />} />
+          <Route
+            path="/cheesemakerconfirmation"
+            element={<ConfirmCheesemaker />}
+          />
         </Routes>
       </main>
     </div>
