@@ -1,7 +1,7 @@
 const ConfirmCheese = () => {
   return (
     <div>
-      <p>Congratulations! You added a new cheese to the page.</p>
+      <p>Cheese successfully removed from the website.</p>
     </div>
   )
 }

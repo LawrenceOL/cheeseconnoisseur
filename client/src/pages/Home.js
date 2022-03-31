@@ -40,7 +40,7 @@ const Home = () => {
         _id: `${_id}`
       }
     })
-    navigate('/about')
+    navigate('/cheeseconfirmation')
   }
 
   return (

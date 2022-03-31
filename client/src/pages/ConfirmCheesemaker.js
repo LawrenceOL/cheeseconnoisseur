@@ -1,7 +1,7 @@
 const ConfirmCheesemaker = () => {
   return (
     <div>
-      <p>Congratulations! You added a new cheesemaker to the page.</p>
+      <p>Cheesemaker successfully removed from the website.</p>
     </div>
   )
 }
