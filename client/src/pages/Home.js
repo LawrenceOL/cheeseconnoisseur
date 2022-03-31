@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import GridCard from '../components/GridCard'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  let navigate = useNavigate()
+
   const [cheeses, setCheeses] = useState([])
   const [cheesetoDelete, setCheesetoDelete] = useState('')
   const [newCheeseName, setNewCheeseName] = useState({
@@ -31,17 +34,14 @@ const Home = () => {
   }, [])
 
   // axios delete call to be used with button presses
-  useEffect(() => {
+  const deleteCheese = (_id) => {
     axios.delete(`http://10.0.0.242:3001/api/deleteCheese`, {
       data: {
-        _id: `${cheesetoDelete}`
+        _id: `${_id}`
       }
     })
-
-    return () => {
-      setCheesetoDelete('')
-    }
-  }, [cheesetoDelete])
+    navigate('/about')
+  }
 
   return (
     <div>
@@ -54,7 +54,7 @@ const Home = () => {
               name={cheese.name}
               image={cheese.image}
               onClick={() => {
-                setCheesetoDelete(cheese._id)
+                deleteCheese(cheese._id)
               }}
             />
           ))}

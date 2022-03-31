@@ -1,6 +1,3 @@
-import axios from 'axios'
-import { useEffect } from 'react'
-
 const GridCard = (props) => {
   return (
     <div>
@@ -10,6 +7,7 @@ const GridCard = (props) => {
       <div></div>
       <h3>{props.name}</h3>
       <button onClick={props.onClick}>Delete</button>
+      {/* <form onSubmit={submitNewCheese}></form> */}
       <input
         type="text"
         // value={newCheeseName.name}

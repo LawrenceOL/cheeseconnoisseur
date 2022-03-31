@@ -2,7 +2,7 @@ const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
 const deleteCheese = async (req, res) => {
   try {
-    const cheese = await Cheese.findById(req.body)
+    const cheese = await Cheese.findById(req.body._id)
     await cheese.deleteOne()
     return res.status(201).json({ cheese })
   } catch (error) {
