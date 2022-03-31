@@ -34,12 +34,9 @@ const Home = () => {
   }
 
   const updateCheeseName = (_id) => {
-    let newName = newCheeseName.name
-    newName = String(newName)
     axios.put(`http://10.0.0.242:3001/api/updateCheese/${_id}`, {
-      name: `${newName}`
+      name: `${newCheeseName.name}`
     })
-    // navigate('/cheeseconfirmation')
   }
 
   return (
