@@ -34,11 +34,11 @@
 
 #### Cheese Display
 
-![Image](./assets/cheesescreen1.png)
+![Image](https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen1.PNG)
 
 #### Add a Cheese Form
 
-![Image](./assets/cheesescreen2.png)
+![Image](https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen2.PNG)
 
 ### **_Getting Started_**
 
