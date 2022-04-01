@@ -40,3 +40,11 @@ p {
 .cheesemakers section form {
   display: none
 }
+
+#cheeseform {
+  margin-left: 20px;
+}
+
+input {
+  margin: 0 10px 10px 0;
+}
