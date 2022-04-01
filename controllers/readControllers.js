@@ -2,7 +2,6 @@ const { Cheese, Cheesemaker, Review, Rating } = require('../models')
 
 const readCheese = async (req, res) => {
   try {
-    console.log(req.body)
     const cheese = await Cheese.findById(req.body)
     if (cheese) {
       return res.status(200).json({ cheese })
