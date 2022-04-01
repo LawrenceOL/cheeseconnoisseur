@@ -34,13 +34,13 @@
 
 #### Cheese Display
 
-<img src="https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen1.PNG" alt="screenshot1" width="400"/>
+<img src="https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen1.PNG" alt="screenshot1" width="800"/>
 
 
 
 #### Add a Cheese Form
 
-<img src="https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen2.PNG" alt="screenshot2" width="400"/>
+<img src="https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen2.PNG" alt="screenshot2" width="800"/>
 
 ### **_Getting Started_**
 
