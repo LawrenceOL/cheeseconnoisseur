@@ -10,7 +10,7 @@
 
 
 
-<img src="https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cheese" width="200"/>
+<img src="https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cheese" width="400"/>
 
 ### **_Description_**
 
@@ -34,11 +34,13 @@
 
 #### Cheese Display
 
-![Image](https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen1.PNG)
+<img src="https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen1.PNG" alt="screenshot1" width="400"/>
+
+
 
 #### Add a Cheese Form
 
-![Image](https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen2.PNG)
+<img src="https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen2.PNG" alt="screenshot2" width="400"/>
 
 ### **_Getting Started_**
 
