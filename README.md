@@ -1,6 +1,6 @@
 # Cheese Connoisseur
 
-## Date: 3/28/22
+## Release Date: 4/1/2022
 
 ### By: Lawrence O'Regan-Lloyd
 
@@ -14,7 +14,7 @@
 
 ### **_Description_**
 
-### A social rating website for all things cheese
+### This project is an example of a custom Content Management System (CMS) for a local cheese conglomorate named "Cheese Connoisseur"
 
 ---
 
@@ -30,21 +30,26 @@
 - Git
   - Github
 
-<!-- ### ***Screenshots***
+### ***Screenshots***
 
-#### Image Header 1
+#### Cheese Display
 
-![Image](https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+![Image](/assets/cheesescreen1.png)
 
-#### Image Header 2
+#### Add a Cheese Form
 
-![Image](https://th.bing.com/th/id/OIP.FXRtrmoRLRbDTBclJXhZCQHaGH?pid=ImgDet&rs=1) -->
+![Image](/assets/cheesescreen2.png)
+
+### **_Getting Started_**
+
+My trello planning board can be found [here](https://trello.com/b/fDXWhTia/cheese-connoisseur)
+A deployed version of this project can be found [here](https://cheesecon.herokuapp.com/)
 
 ### **_Future Updates_**
 
-- [ ] Add cheeses
 - [ ] Add ratings
-- [ ] Add cheese maker profiles
+- [ ] Add cheese maker and cheese details
+- [ ] Add user login and profiles
 
 ### **_Credits:_**
 
@@ -52,8 +57,6 @@
 
 ### **_Inspired By:_**
 
-#### [Beer Advocate](https://www.beeradvocate.com/)
+#### [Cheese Society](https://www.cheesesociety.org/)
 
-#### [IMDB](https://www.imdb.com/)
 
-#### [Erewhon](https://www.erewhonmarket.com/)
