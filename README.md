@@ -26,7 +26,9 @@
 - React
 - Node.js
 - MongoDB
+  - MongoDB Atlas
 - Express
+- Heroku
 - Git
   - Github
 
