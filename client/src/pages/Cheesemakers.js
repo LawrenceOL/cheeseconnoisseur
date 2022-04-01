@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const Cheesemakers = () => {
   let navigate = useNavigate()
   const [cheesemakers, setCheesemakers] = useState([])
-  const [cheesemakertoDelete, setCheesemakertoDelete] = useState('')
+  const [newCheesemakerName, setNewCheesemakerName] = useState('')
 
   // axios delete call to be used with button presses
   const deleteCheesemaker = (_id) => {
@@ -18,6 +18,13 @@ const Cheesemakers = () => {
     navigate('/cheesemakerconfirmation')
   }
 
+  const handleChange = (e) => {
+    setNewCheesemakerName({
+      ...newCheesemakerName,
+      [e.target.name]: e.target.value
+    })
+  }
+
   useEffect(() => {
     const getCheesemakers = async () => {
       const response = await axios.get(`/api/readAllCheesemakers`)
@@ -25,6 +32,12 @@ const Cheesemakers = () => {
     }
     getCheesemakers()
   }, [])
+
+  const updateCheesemakerName = (_id) => {
+    axios.put(`/api/updateCheesemaker/${_id}`, {
+      name: `${newCheesemakerName.name}`
+    })
+  }
 
   return (
     <div>
@@ -38,6 +51,10 @@ const Cheesemakers = () => {
               image={cheesemaker.image}
               onClick={() => {
                 deleteCheesemaker(cheesemaker._id)
+              }}
+              onChange={handleChange}
+              onSubmit={() => {
+                updateCheesemakerName(cheesemaker._id)
               }}
             />
           ))}

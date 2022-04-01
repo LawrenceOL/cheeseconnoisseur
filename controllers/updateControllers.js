@@ -15,12 +15,16 @@ const updateCheese = async (req, res) => {
 //update cheesemaker name by cheesemaker id
 const updateCheesemaker = async (req, res) => {
   try {
-    const cheesemaker = await Cheesemaker.findById(req.body)
-    cheesemaker.name = 'handleChange'
-    await cheesemaker.save()
-    return res.status(201).json({ cheesemaker })
-  } catch (error) {
-    return res.status(500).json({ error: error.message })
+    const cheesemaker = await Cheesemaker.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      {
+        new: true
+      }
+    )
+    res.json(cheesemaker)
+  } catch (err) {
+    res.send(err.message)
   }
 }
 
@@ -47,10 +51,6 @@ const updateRating = async (req, res) => {
     return res.status(500).json({ error: error.message })
   }
 }
-
-// const doc = await Model.findById(id);
-// doc.name = 'jason bourne';
-// await doc.save();
 
 module.exports = {
   updateCheese,
