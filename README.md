@@ -46,8 +46,8 @@
 
 ### **_Getting Started_**
 
-My trello planning board can be found [here](https://trello.com/b/fDXWhTia/cheese-connoisseur)
-A deployed version of this project can be found [here](https://cheesecon.herokuapp.com/)
+My trello planning board can be found [here](https://trello.com/b/fDXWhTia/cheese-connoisseur). </br>
+A deployed version of this project can be found [here](https://cheesecon.herokuapp.com/).
 
 ### **_Future Updates_**
 
