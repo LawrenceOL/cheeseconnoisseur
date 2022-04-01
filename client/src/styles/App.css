@@ -36,3 +36,7 @@ p {
   grid-gap: 10px;
   justify-content: center;
 }
+
+.cheesemakers section form {
+  display: none
+}
