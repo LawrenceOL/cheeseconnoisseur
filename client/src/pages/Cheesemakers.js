@@ -10,7 +10,7 @@ const Cheesemakers = () => {
 
   // axios delete call to be used with button presses
   const deleteCheesemaker = (_id) => {
-    axios.delete(`http://10.0.0.242:3001/api/deleteCheesemaker`, {
+    axios.delete(`/api/deleteCheesemaker`, {
       data: {
         _id: `${_id}`
       }
@@ -20,9 +20,7 @@ const Cheesemakers = () => {
 
   useEffect(() => {
     const getCheesemakers = async () => {
-      const response = await axios.get(
-        `http://10.0.0.242:3001/api/readAllCheesemakers`
-      )
+      const response = await axios.get(`/api/readAllCheesemakers`)
       setCheesemakers(response.data.cheesemaker)
     }
     getCheesemakers()
