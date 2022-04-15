@@ -10,7 +10,7 @@
 
 
 
-<img src="https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cheese" width="400"/>
+<img src="https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cheese" width="400px"/>
 
 ### **_Description_**
 
