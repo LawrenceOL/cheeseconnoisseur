@@ -8,8 +8,6 @@
 
 ---
 
-
-
 <img src="https://images.pexels.com/photos/773253/pexels-photo-773253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cheese" width="400px"/>
 
 ### **_Description_**
@@ -32,13 +30,11 @@
 - Git
   - Github
 
-### ***Screenshots***
+### **_Screenshots_**
 
 #### Cheese Display
 
 <img src="https://github.com/LawrenceOL/cheeseconnoisseur/blob/main/assets/cheesescreen1.PNG" alt="screenshot1" width="800"/>
-
-
 
 #### Add a Cheese Form
 
@@ -47,7 +43,7 @@
 ### **_Getting Started_**
 
 My trello planning board can be found [here](https://trello.com/b/fDXWhTia/cheese-connoisseur). </br>
-A deployed version of this project can be found [here](https://cheesecon.herokuapp.com/).
+A deployed version of this project can be found [here](https://cheeseconn.herokuapp.com/).
 
 ### **_Future Updates_**
 
@@ -62,5 +58,3 @@ A deployed version of this project can be found [here](https://cheesecon.herokua
 ### **_Inspired By:_**
 
 #### [Cheese Society](https://www.cheesesociety.org/)
-
-
