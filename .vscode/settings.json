@@ -1,5 +1,0 @@
-{
-  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
-  "appService.defaultWebAppToDeploy": "/subscriptions/fcc1238d-d050-47ee-a1c3-936149959ff6/microsoft.web/sites/subscriptions/fcc1238d-d050-47ee-a1c3-936149959ff6/resourceGroups/cheesecon_group/providers/Microsoft.Web/sites/cheesecon",
-  "appService.deploySubpath": "."
-}
